@@ -11,7 +11,8 @@ services:
       retries: 12
     networks:
       - "mynetwork"
-    restart: "always"
+    restart_policy: 
+      - on-failure
     volumes:
       - myvolume:/var/lib/mysql
     deploy:
@@ -43,7 +44,9 @@ services:
           memory: 512M     
         reservations:
           cpus: "0.25"     
-          memory: 256M  
+          memory: 256M
+    restart_policy: 
+      - on-failure
     volumes:
       - mydata:/application
   
