@@ -1,5 +1,3 @@
-# Local smoke test before pushing images:  docker compose up --build
-# Then open http://localhost:8080 and register a new user to test
 services:
   devopsdb:
     image: shaikmustafa/king:db
@@ -24,10 +22,6 @@ services:
         reservations:
           cpus: "0.5"  
           memory: 1G 
-        
-
-    
-
   app:
     image: shaikmustafa/king:app
     ports:
@@ -55,7 +49,6 @@ services:
 networks:
   mynetwork:
     driver: bridge
-
 volumes:
   myvolume:
   mydata:
