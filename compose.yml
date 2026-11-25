@@ -49,8 +49,11 @@ services:
   
 networks:
   mynetwork:
+    name: "mynetwork"
     driver: bridge
 
 volumes:
   myvolume:
+    name: "mysql-data"
   mydata:
+    name: "app-data"
